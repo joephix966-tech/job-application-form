@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+<h1>Job Application Form</h1>
+<p class="description" >We are looking for talented individuals to join our team. Please complete the application below.</p>
+
+<form>
+<fieldset>
+<legend>Personal Information</legend>
+<label for="name">Full Name: </label>
+<input type="text" name="name" id="name" placeholder="E.g., Sobowale Joseph" required/>
+<label for="email">Email Address: </label>
+<input type="email" id="email" name="email" placeholder="E.g., joephix966@gmail.com" required/>
+<label for="tel">Phone Number: </label>
+<input type="tel" id="tel" name="Phone" placeholder="E.g., +2347040314275">
+
+<label for="country">Country</label>
+<select id="country" name="country" required>
+  <option value="">Select your country</option>
+  <option value="nigeria">Nigeria</option>
+  <option value="ghana">Ghana</option>
+  <option value="kenya">Kenya</option>
+  <option value="south-africa">South Africa</option>
+  <option value="united-kingdom">United Kingdom</option>
+  <option value="united-states">United States</option>
+  <option value="canada">Canada</option>
+</select>
+    </fieldset>
+
+    <fieldset>
+<legend>Position Information</legend>
+<label for="department">Department: </label>
+<select id="department" name="department" required>
+    <option value="">Select your Department</option>
+    <option value="Ai-Ml">Ai & ML</option>
+    <option value="Software Engineering">Software Engineering</option>
+    <option value="cybersecurity">Cyber Security</option>
+    <option value="Graphic-design">Graphic Design</option>
+    <option value="Research">Research</option>
+    <option value="Administration">Administration</option>
+    <option value="Customer-support">Customer Support</option>
+    <option value="marketing">Marketing</option>
+    <option value="sales">Sales</option>
+</select>
+
+    <label for="employment-type">Employment Type: </label>
+    <select id="employment-type" name="employment-type" required>
+<option value="">Select employment type</option>
+<option value="full-time">Full-time</option>
+<option value="part-time">Part-time</option>
+<option value="internship">Internship</option>
+<option value="contract">Contract</option>
+</select>
+
+<label for="salary">Expected Monthly salary ($)</label>
+<input
+ type="number" 
+ id="salary" 
+ name="salary" 
+ placeholder="E.g., 180000" 
+ min="0" 
+ required/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education-level">Education Level: </label>
+            <select id="education-level" name="education-level" required>
+            <option value="">Select education level</option>
+            <option value="Secondary-school">Secondary School</option>
+            <option value="diploma">Diploma</option>
+            <option value="Bachelor's-degree">Bachelor's Degree</option>
+            <option value="master's-degree">Master's Degree</option>
+            <option value="doctorate">Doctorate</option>
+            <option value="others">Others</option>
+        </select>
+<label for="institution">Institution</label>
+<input type="text" id="institution" placeholder="Babcock University" required/>
+<label for="field-of-study">Field of Study</label>
+<input type="text" id="field-of-study" name="field-of-study" placeholder="Software Engineering" required/>
+<label for="graduation-year">Graduation Year</label>
+<input type="number" id="graduation-year" name="graduation-year" placeholder="2010" required/>
+        </fieldset>
+
+        <fieldset>
+<legend>Work Experience</legend>
+<label for="company">Company</label>
+<input type="text" id="company" name="company" placeholder="E.g., Google" required/>
+<label for="job-title">Job Title</label>
+<input type="text" id="job-title" name="job-title" placeholder="E.g., junior developer" required/>
+<label for="responsibilities">Responsibilities</label>
+<textarea
+  id="responsibilities"
+  name="responsibilities"
+  placeholder="Describe your responsibilities..."
+></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="git">Git</label>
+<input id="git" name="skills" type="checkbox" value="git" checked>
+
+<label for="java">Java</label>
+<input id="java" name="skills" type="checkbox" value="java">
+
+<label for="rust">Rust</label>
+<input id="rust" name="skills" type="checkbox" value="rust">
+
+<label for="javascript">JavaScript</label>
+<input id="javascript" name="skills" type="checkbox" value="javascript">
+
+<label for="css">CSS</label>
+<input id="css" name="skills" type="checkbox" value="css">
+
+<label for="html">HTML</label>
+<input id="html" name="skills" type="checkbox" value="html">
+
+<label for="python">Python</label>
+<input id="python" name="skills" type="checkbox" value="python">
+
+<label for="sql">SQL</label>
+<input id="sql" name="skills" type="checkbox" value="sql">
+        </fieldset>
+
+    
+            <fieldset>
+  <legend>Resume / CV</legend>
+
+  <label for="resume">Upload your Resume/CV</label>
+  <input
+    type="file"
+    id="resume"
+    name="resume"
+    accept=".pdf,.doc,.docx"
+    required
+  >
+
+  <small>Accepted formats: PDF, DOC, DOCX</small>
+</fieldset>
+        
+<fieldset>
+    <legend>Cover Letter</legend>
+    <textarea
+  id="cover-letter"
+  name="cover-letter"
+  placeholder="Write your letter here..."
+  required
+></textarea>
+</fieldset>
+
+<fieldset>
+  <legend>Additional Questions</legend>
+
+  <p>Are you legally authorized to work in this country?</p>
+
+  <input
+    type="radio"
+    id="authorized-yes"
+    name="authorized"
+    value="yes"
+    class="radio-btn"
+    required
+  >
+  <label for="authorized-yes">Yes</label>
+
+  <input
+    type="radio"
+    id="authorized-no"
+    name="authorized"
+    value="no"
+    class="radio-btn"
+  >
+  <label for="authorized-no">No</label>
+
+
+  <p>Are you willing to relocate?</p>
+
+  <input
+    type="radio"
+    id="relocate-yes"
+    name="relocate"
+    value="yes"
+    required
+    class="radio-btn"
+  >
+  <label for="relocate-yes">Yes</label>
+
+  <input
+    type="radio"
+    id="relocate-no"
+    name="relocate"
+    value="no"
+    class="radio-btn"
+  >
+  <label for="relocate-no">No</label>
+
+  <input
+    type="radio"
+    id="relocate-maybe"
+    name="relocate"
+    value="maybe"
+    class="radio-btn"
+  >
+  <label for="relocate-maybe">Maybe</label>
+
+</fieldset>
+
+<fieldset>
+    <input
+  type="checkbox"
+  id="attestation"
+  name="attestation"
+  required
+>
+
+<label for="attestation">
+  I confirm that the information provided in this application is accurate and complete.
+</label>
+</fieldset>
+<button class="submit-btn" type="submit">Submit Form</button>
+        
+    </form>
+</div>
+</body>
+</html>
